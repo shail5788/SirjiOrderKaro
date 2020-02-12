@@ -65,4 +65,9 @@ class userController extends Controller
           return response()->json(["user"=>$user],$this->successStatus);
 
     }
+    public function getAllUser(){
+
+          $users=User::all();
+          return response()->json(["users"=>$users],$this->successStatus);
+    }
 }
